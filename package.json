@@ -11,7 +11,7 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "gravatar": "^1.8.2",
-    "handlebars": "4.7.7",
+    "handlebars": "4.7.9",
     "jsonresume-theme-tan-responsive": "^0.0.7",
     "lodash": "^4.17.21",
     "mustache": "~4.2.0"
