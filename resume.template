@@ -112,6 +112,32 @@
 					</div>
 					<div class="clear"></div>
 				</section>
+				{{#volunteerBool}}
+				<section>
+					<div class="sectionTitle text-uppercase">
+						<h1><B>Volunteer</B></h1>
+					</div>
+					<div class="sectionContent">
+						<article>
+							{{#volunteer}}
+                            <h2>{{position}} at {{organization}}</h2>
+                            <p class="subDetails">{{startDateMonth}}{{startDateYear}} – {{endDateMonth}}{{endDateYear}}</p>
+                            {{#summary}}<p>{{{summary}}}</p>{{/summary}}
+                            {{#boolHighlights}}
+                                <ul class="info">
+                                    {{#highlights}}
+                                    <li>{{{.}}}</li>
+                                    {{/highlights}}
+                                </ul>
+                            {{/boolHighlights}}
+                            <br/>
+							{{/volunteer}}
+						</article>
+						<br>
+					</div>
+					<div class="clear"></div>
+				</section>
+				{{/volunteerBool}}
 				<section>
 					<div class="sectionTitle text-uppercase">
 						<h1><B>Certifications</B></h1>
@@ -209,6 +235,81 @@
 					<div class="clear" />
 					{{/educationBool}}
 				</section>
+				{{#awardsBool}}
+				<section>
+					<div class="sectionTitle text-uppercase">
+						<h1><B>Awards</B></h1>
+					</div>
+					<div class="sectionContent">
+						<article>
+							{{#awards}}
+                            <h2>{{title}}</h2>
+                            <p class="subDetails">{{awarder}}{{#awarder}} – {{/awarder}}{{month}}{{year}}</p>
+                            {{#summary}}<p>{{{summary}}}</p>{{/summary}}
+                            <br/>
+							{{/awards}}
+						</article>
+						<br>
+					</div>
+					<div class="clear"></div>
+				</section>
+				{{/awardsBool}}
+				{{#publicationsBool}}
+				<section>
+					<div class="sectionTitle text-uppercase">
+						<h1><B>Publications</B></h1>
+					</div>
+					<div class="sectionContent">
+						<article>
+							{{#publications}}
+                            <h2>{{name}}</h2>
+                            <p class="subDetails">{{publisher}}{{#publisher}} – {{/publisher}}{{month}}{{year}}</p>
+                            {{#summary}}<p>{{{summary}}}</p>{{/summary}}
+                            {{#url}}<p class="subDetails"><a class="text-decoration-none" href="{{url}}" target="_blank">{{url}}</a></p>{{/url}}
+                            <br/>
+							{{/publications}}
+						</article>
+						<br>
+					</div>
+					<div class="clear"></div>
+				</section>
+				{{/publicationsBool}}
+				{{#languagesBool}}
+				<section>
+					<div class="sectionTitle text-uppercase">
+						<h1><B>Languages</B></h1>
+					</div>
+					<div class="sectionContent">
+						<article>
+							<ul class="info">
+								{{#languages}}
+								<li>{{language}}{{#fluency}} <span class="subDetails">({{fluency}})</span>{{/fluency}}</li>
+								{{/languages}}
+							</ul>
+						</article>
+						<br>
+					</div>
+					<div class="clear"></div>
+				</section>
+				{{/languagesBool}}
+				{{#referencesBool}}
+				<section>
+					<div class="sectionTitle text-uppercase">
+						<h1><B>References</B></h1>
+					</div>
+					<div class="sectionContent">
+						<article>
+							{{#references}}
+                            <p>{{{reference}}}</p>
+                            <p class="subDetails">— {{name}}</p>
+                            <br/>
+							{{/references}}
+						</article>
+						<br>
+					</div>
+					<div class="clear"></div>
+				</section>
+				{{/referencesBool}}
 			</div>
 		</div>
 		<script type="text/javascript">
